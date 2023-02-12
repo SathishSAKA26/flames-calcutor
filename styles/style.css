@@ -26,7 +26,13 @@ html {
 
 body {
   font-family: "Fira Sans Condensed", sans-serif;
-  background-color: var(--clr-white);
+  background-image: url(../images/love-3061483_640.webp);
+  /* background-position: center; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* global css */
