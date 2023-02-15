@@ -29,6 +29,7 @@
     <div class="main-container">
       <div class="contend">
         <h1 class="title">flames calculator</h1>
+
         <!-- love image container -->
         <div class="love-image">
           <img
@@ -38,19 +39,30 @@
           />
         </div>
 
+        <!-- input container -->
         <div class="input-container">
           <p class="sub-title">Enter the name:</p>
-          <input class="input" type="text" placeholder="Your Name" />
+          <input class="input" type="text" placeholder="Your Name" id="You" />
           <p class="sub-title">Enter the name:</p>
-          <input class="input" type="text" placeholder="Your Curs Name" />
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Crush Name"
+            id="crush"
+          />
         </div>
-        <p class="info">Relationship Starts of ANNA & CRIS is:</p>
+        <p class="info">Relationship Starts of YOU & CRUSH is:</p>
+
+        <!-- list value -->
         <ul class="flames">
-          <li class="list-item">affection</li>
+          <img src="" alt="" />
+          <li class="list-item" id="list">Friendship</li>
         </ul>
+
+        <!-- button container -->
         <div class="button-container">
-          <button class="btn flam">Flames</button>
-          <button class="btn reset">Reset</button>
+          <button class="btn flam" id="flames-button">Flames</button>
+          <button class="btn reset" id="reset">Reset</button>
         </div>
       </div>
     </div>
