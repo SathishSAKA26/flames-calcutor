@@ -25,14 +25,12 @@ html {
 }
 
 body {
+  width: 100%;
   font-family: "Fira Sans Condensed", sans-serif;
-  background-image: url(../images/love-3061483_640.webp);
-  /* background-position: center; */
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
+
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 /* global css */
@@ -48,4 +46,49 @@ a {
 
 li {
   list-style: none;
+}
+
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.contend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: var(--clr-paradise-pink);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.love-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.love {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.input-container {
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ef476f;
+  padding: 0.5rem;
 }
