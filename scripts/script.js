@@ -36,6 +36,11 @@
 
 // console.log(Flames);
 
+let listEl = document.getElementById("list");
+let resetEl = document.getElementById("reset");
+
+// globule verbals
+listEl.innerHTML = null;
 // only function
 function flames() {
   var yourName = document.getElementById("You").value;
@@ -45,16 +50,41 @@ function flames() {
   var yourName_arr = yourName.split("");
   var crushName_arr = crushName.split("");
 
-  // No name enter alert message send in user
-  if (yourName === undefined || crushName === undefined) {
-    throw Error("இரண்டு பெயர்களும் தேவை!❤️😞");
-  }
-
-  // For loops
+  // For loop
   for (var i = 0; i < yourName_arr.length; i++) {
-    for (var j = 0; i < crushName_arr.length; i++) {
+    for (var j = 0; j < crushName_arr.length; j++) {
       if (yourName_arr[i] == crushName_arr[j]) {
+        yourName_arr.splice(i, 1);
+        crushName_arr.splice(j, 1);
+        i--;
+        break;
       }
     }
+  }
+
+  var count = yourName_arr.length + crushName_arr.length;
+  var result = "";
+
+  if (count == 0) {
+    result = "இரண்டு பெயர்களும் தேவை!❤️😞..";
+  } else {
+    var flames_arr = [
+      "Friends",
+      "Lovers",
+      "Angry",
+      "Married",
+      "Engaged",
+      "Siblings",
+    ];
+
+    while (flames_arr.length > 1) {
+      var index = count % flames_arr.length;
+      if (index == 0) {
+        index = flames_arr.length;
+      }
+      flames_arr.splice(index - 1, 1);
+    }
+    result = flames_arr[0];
+    listEl.innerHTML = result;
   }
 }
